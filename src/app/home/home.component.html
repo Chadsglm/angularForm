@@ -1,0 +1,21 @@
+<div fxFlex fxFlexOffset="20px" class="members-view">
+  <button type="button" mat-button 
+          class="background-primary text-floral-white" >
+  Create
+  </button>
+  <div>
+    <div *ngFor="let member of members" (click)="getPersonDetails(member.persnr)">
+      <p>  {{member.name}}</p>
+    </div>
+  </div>
+
+  <div>
+    <router-outlet></router-outlet>
+    
+  </div>
+
+  <div *ngIf="projects && projects.length">
+    <p *ngFor="let project of projects"> Project Name : {{project.bezeichnung}} </p>
+  </div>
+</div>
+

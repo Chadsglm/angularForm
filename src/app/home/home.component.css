@@ -1,0 +1,7 @@
+.members-view {
+    display : flex;
+}
+
+.members-view > div {
+    width: 33%;
+}

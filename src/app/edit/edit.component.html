@@ -1,0 +1,28 @@
+<form [formGroup]="editForm" novalidate class="edit-form" *ngIf="person">
+ 
+  <mat-input-container>
+    <input matInput placeholder="Name" formControlName="name" type="text">
+  </mat-input-container>
+
+  <mat-input-container>
+    <input matInput placeholder="Personal Number" formControlName="persnr" type="text">
+  </mat-input-container>
+
+  <mat-input-container>
+    <input matInput placeholder="Telefon Number" formControlName="tel" type="text">
+  </mat-input-container>
+
+  <mat-input-container>
+    <input matInput placeholder="Sälar" formControlName="salaer" type="text">
+  </mat-input-container>
+
+  <mat-input-container>
+    <input matInput placeholder="Abteilungsnumber" formControlName="abtnr" type="text">
+  </mat-input-container>
+
+  <mat-input-container>
+    <input matInput placeholder="Wohnort" formControlName="wohnort" type="text">
+  </mat-input-container>
+
+</form>
+<button [routerLink]="['/home']">Back</button>

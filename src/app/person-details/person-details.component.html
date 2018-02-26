@@ -1,0 +1,21 @@
+<div novalidate *ngIf="person">
+  <mat-list-item>
+    <p matLine>Abteilung Name : {{person.abtName}}</p>
+    <p matLine>Abteilung Number : {{person.abtnr}}</p>
+    <p matLine>Abteilung Bonus : {{person.bonus}}</p>
+    <p matLine>Eintritsdatum : {{person.eintrittsdatum | date:'short'}}</p>
+    <p matLine>Person Name : {{person.name}}</p>
+    <p matLine>Person Number : {{person.persnr}}</p>
+    <p matLine>Person Salaer : {{person.salaer}}</p>
+    <p matLine>Wohnort : {{person.wohnort}}</p>
+  </mat-list-item>
+  <button type="button" mat-button 
+          class="background-primary text-floral-white" (click)="onSubmit()">
+      Delete
+  </button>
+  <button type="button" mat-button *ngIf="person"
+          class="background-primary text-floral-white" 
+          [routerLink]="['edit', person.persnr]">
+      Edit
+  </button>
+</div>
